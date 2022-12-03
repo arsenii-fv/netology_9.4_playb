@@ -1,0 +1,17 @@
+---
+# This is an example playbook to execute Ansible tests.
+- name: Verify
+  hosts: all
+  gather_facts: true
+  some_fact: deb default fact
+  tasks:
+  - name: Example assertion
+    ansible.builtin.assert:
+      that: true
+#
+  - name: Assert Vector Service
+      ansible.builtin.assert:
+        that:
+          - "'{{ vector_service }}' in ansible_facts.services"
+          - "'running' == ansible_facts.services[vector_service].state"
+          - "'enabled' == ansible_facts.services[vector_service].status"
