@@ -7,9 +7,9 @@ driver:
     D: true
     vv: true
 
-lint: |
-  yamllint .
-  ansible-lint .
+# lint: |
+#  yamllint .
+#  ansible-lint .
 #  flake8
 platforms:
   - name: centos_7
