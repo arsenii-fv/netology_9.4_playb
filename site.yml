@@ -9,10 +9,10 @@
   roles:
     - nginx_role
 
-- name: Install clickhouse
-  hosts: host-cl
-  roles:
-    - clickhouse_role
+#- name: Install clickhouse
+#  hosts: host-cl
+#  roles:
+#    - clickhouse_role
 
 - name: Install vector
   hosts: host-vc
