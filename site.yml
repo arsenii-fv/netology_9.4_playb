@@ -1,20 +1,20 @@
 ---
-- name: Install lighthouse
-  hosts: host-lt
-  roles:
-    - lighthouse_role
-
-- name: Install nginx
-  hosts: host-lt
-  roles:
-    - nginx_role
-
-#- name: Install clickhouse
-#  hosts: host-cl
+#- name: Install lighthouse
+#  hosts: host-lt
 #  roles:
-#    - clickhouse_role
+#    - lighthouse_role
 
-- name: Install vector
-  hosts: host-vc
+#- name: Install nginx
+#  hosts: host-lt
+#  roles:
+#    - nginx_role
+
+- name: Install clickhouse
+  hosts: host-cl
   roles:
-    - vector_role
+    - clickhouse_role
+
+      #- name: Install vector
+      #  hosts: host-vc
+      #  roles:
+      # - vector_role
